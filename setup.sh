@@ -1,12 +1,12 @@
-aws ec2 create-key-pair --key-name talad_k8s | jq -r '.KeyMaterial' > talad_k8s.pem
-mv talad_k8s.pem ~/.ssh/ 
-chmod 400 ~/.ssh/talad_k8s.pem
-ssh-keygen -y -f ~/.ssh/talad_k8s.pem > ~/.ssh/talad_k8s.pub
+aws ec2 create-key-pair --key-name my_k8s | jq -r '.KeyMaterial' > my_k8s.pem
+mv my_k8s.pem ~/.ssh/ 
+chmod 400 ~/.ssh/my_k8s.pem
+ssh-keygen -y -f ~/.ssh/my_k8s.pem > ~/.ssh/my_k8s.pub
 
 
 ID=$(uuidgen) && \
 aws route53 create-hosted-zone \ 
---name talad-k8s.cf \
+--name my_k8s \
 --caller-reference $ID \
 | jq .DelegationSet.NameServers
 

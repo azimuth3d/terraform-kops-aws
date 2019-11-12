@@ -1,9 +1,9 @@
 terraform  {
     backend "s3" {
          encrypt = true
-         bucket = "talad-terraform-state"
+         bucket = "terraform-state"
          key = "common/prod_build.tfstate"
          region = "ap-southeast-1"
-         dynamodb_table = "talad-terraform-state"
+         dynamodb_table = "terraform-state"
     }
 }
