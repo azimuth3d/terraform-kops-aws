@@ -4,7 +4,7 @@ Terraform configurations to create 1 vpc , 3 subnet pairs ( public and private) 
 
 ##### Following this step 
 1. Use terraform plan and apply to privision resource we need for create new cluster 
-2. you need to change yoour cluster name to your domain
+2. You need to change your cluster name to your domain
 3. Execute "deploy.sh" in "kops" folder to generate kubernetes.tf from template.yaml that we have specified 
 4. Apply for kubernetes cluster deployment
 5. point your domain to your host zoned dns
